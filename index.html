@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayshree Jangir - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+        header {
+            background-color: #1f1f1f;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: #ff7b00;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-weight: 300;
+        }
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            background-color: #1f1f1f;
+            padding: 10px;
+        }
+        .mobile-menu a {
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .mobile-menu.active {
+                display: flex;
+            }
+        }
+
+        .container {
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            color: #ff7b00;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #ff7b00;
+            text-align: center;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: #1f1f1f;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .skill-category {
+            flex: 1 1 300px;
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .skill-category ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-category li {
+            margin-bottom: 8px;
+        }
+
+        #contact p, #contact a {
+            font-size: 16px;
+            color: #ccc;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ff7b00;
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        .btn:hover {
+            background-color: #e36d00;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Jayshree Jangir</div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<!-- Hero Section -->
+<section class="hero container" id="about" data-aos="fade-up">
+    <h1>Hi, I'm Jayshree</h1>
+    <p>A passionate Media and Communication enthusiast, Project Manager, and storyteller. I thrive on creativity and building impactful brand experiences.</p>
+    <a href="Jayshree_Resume.pdf" download class="btn"><i class="fas fa-download"></i> Download Resume</a>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" data-aos="fade-up">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="project1.jpg" alt="Project 1" style="width:100%; height:200px; object-fit:cover;">
+                <div style="padding: 20px;">
+                    <h3>Autism Awareness Campaign</h3>
+                    <p>Led a city-wide awareness campaign including influencer collaborations, school drives, and panel discussions.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="project2.jpg" alt="Project 2" style="width:100%; height:200px; object-fit:cover;">
+                <div style="padding: 20px;">
+                    <h3>Women Empowerment Web Series</h3>
+                    <p>Coordinated a 5-episode YouTube series highlighting rural women entrepreneurs, reaching 100K+ views.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="project3.jpg" alt="Project 3" style="width:100%; height:200px; object-fit:cover;">
+                <div style="padding: 20px;">
+                    <h3>Digital Branding Strategy</h3>
+                    <p>Developed a brand identity and complete digital strategy for a new wellness startup, driving its first 10K followers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" data-aos="fade-up">
+    <div class="container">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Project Management</h3>
+                <ul>
+                    <li>Team Leadership</li>
+                    <li>Client Coordination</li>
+                    <li>Agile Tools (Monday.com, Trello)</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Marketing & Branding</h3>
+                <ul>
+                    <li>Social Media Strategy</li>
+                    <li>Campaign Management</li>
+                    <li>Influencer Collaborations</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Creative & Content</h3>
+                <ul>
+                    <li>Copywriting & Scripting</li>
+                    <li>Video Production Coordination</li>
+                    <li>Storyboarding & Design Briefs</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" data-aos="fade-up">
+    <div class="container">
+        <h2 class="section-title">Let's Connect</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 30px;">
+            Whether you're looking to collaborate on a campaign or just want to talk creative ideas, I'd love to hear from you.
+        </p>
+        <div style="text-align: center;">
+            <p><i class="fas fa-envelope"></i> <a href="mailto:jangirjayshree@gmail.com">jangirjayshree@gmail.com</a></p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+917339707194">+91 73397 07194</a></p>
+            <p><i class="fab fa-linkedin-in"></i> <a href="https://linkedin.com/in/jayshree-jangir-8724b61a6" target="_blank">LinkedIn</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- AOS Script + Mobile Menu Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+
+    function toggleMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
