@@ -297,125 +297,6 @@
             gap: 10px;
         } */
 
-        /* Enhanced About Section */
-        .about-section {
-            padding: 100px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-image {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            transform: perspective(1000px) rotateY(-10deg);
-        }
-
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-
-        .about-image:hover img {
-            transform: scale(1.05);
-        }
-
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(255,123,0,0.2), rgba(108,77,246,0.2));
-            z-index: 1;
-        }
-
-        .about-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .about-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .about-title {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            line-height: 1.3;
-        }
-
-        .about-title span {
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .about-text {
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        .about-highlights {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .highlight-card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 15px;
-            padding: 25px;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .light-mode .highlight-card {
-            background: rgba(0,0,0,0.03);
-            border: 1px solid rgba(0,0,0,0.1);
-        }
-
-        .highlight-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            border-color: var(--primary);
-        }
-
-        .highlight-icon {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .highlight-title {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
         .experience-section {
             padding: 100px 0;
             background: linear-gradient(to bottom, rgba(31,31,31,0.9), rgba(18,18,18,1));
@@ -528,7 +409,7 @@
         .light-mode .skill-tag {
             background: rgba(255,123,0,0.1);
         }
-
+        
         /* Projects Section */
         .projects-grid {
             display: grid;
@@ -962,7 +843,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
      <!-- Enhanced About Section -->
     <section class="about-section" id="about" data-aos="fade-up">
         <div class="about-container">
