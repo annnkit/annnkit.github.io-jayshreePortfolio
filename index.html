@@ -255,7 +255,7 @@
         }
 
         /* About Section */
-        .about {
+/*         .about {
             background-color: var(--dark-card);
             border-radius: 20px;
             padding: 60px;
@@ -295,6 +295,125 @@
             display: flex;
             align-items: center;
             gap: 10px;
+        } */
+
+        /* Enhanced About Section */
+        .about-section {
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            transform: perspective(1000px) rotateY(-10deg);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,123,0,0.2), rgba(108,77,246,0.2));
+            z-index: 1;
+        }
+
+        .about-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .about-title span {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .about-text {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .highlight-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .light-mode .highlight-card {
+            background: rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-color: var(--primary);
+        }
+
+        .highlight-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .highlight-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
         }
 
         /* Projects Section */
@@ -374,7 +493,7 @@
         }
 
         /* Skills Section */
-        .skills-container {
+/*         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
@@ -430,6 +549,122 @@
             height: 100%;
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             border-radius: 4px;
+        } */
+
+        /* Enhanced Skills Section */
+        .skills-section {
+            padding: 100px 0;
+        }
+
+        .skills-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-category {
+            background: var(--dark-card);
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            border-left: 5px solid var(--primary);
+        }
+
+        .light-mode .skill-category {
+            background: var(--light-card);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .skill-category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .skill-category-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .skill-category-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .skill-category-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .skill-item {
+            margin-bottom: 20px;
+        }
+
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .skill-name {
+            font-weight: 500;
+        }
+
+        .skill-percentage {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .skill-bar-container {
+            height: 8px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .light-mode .skill-bar-container {
+            background: rgba(0,0,0,0.1);
+        }
+
+        .skill-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, 
+                          rgba(255,255,255,0.1) 0%, 
+                          rgba(255,255,255,0.3) 50%, 
+                          rgba(255,255,255,0.1) 100%);
+            animation: shine 2s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
         }
 
         /* Contact Section */
@@ -521,53 +756,39 @@
             transform: translateY(-5px);
         }
 
-        /* Responsive Design */
+                /* Responsive Design */
         @media (max-width: 992px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
+            .about-container {
+                grid-template-columns: 1fr;
             }
             
-            .hero-content {
-                margin-bottom: 50px;
+            .about-image {
+                max-width: 500px;
+                margin: 0 auto;
             }
             
-            .hero h1 {
-                font-size: 2.8rem;
+            .about-highlights {
+                grid-template-columns: 1fr;
             }
         }
 
         @media (max-width: 768px) {
-            nav {
-                display: none;
+            .experience-timeline {
+                padding-left: 30px;
             }
             
-            .hamburger {
-                display: block;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .container {
-                padding: 100px 20px;
-            }
-            
-            .about {
-                padding: 40px;
+            .timeline-item::before {
+                left: -30px;
             }
         }
 
         @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 1.8rem;
+            .about-title {
+                font-size: 2rem;
             }
             
-            .btn {
-                display: block;
-                width: 100%;
-                margin-bottom: 15px;
+            .timeline-item {
+                padding: 20px;
             }
         }
     </style>
@@ -629,60 +850,125 @@
     </section>
 
     <!-- About Section -->
-    <section class="container" id="about" data-aos="fade-up">
-        <div class="about">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-grid">
-                <div class="about-card" data-aos="zoom-in">
-                    <h3><i class="fas fa-lightbulb"></i> My Philosophy</h3>
-                    <p>I believe in media that matters - content that not only engages but creates positive social impact. My approach combines data-driven strategy with human-centered storytelling to build campaigns that resonate deeply with audiences.</p>
-                </div>
-                <div class="about-card" data-aos="zoom-in" data-aos-delay="100">
-                    <h3><i class="fas fa-bullseye"></i> My Focus</h3>
-                    <p>Specializing in digital marketing strategy, influencer collaborations, and social impact campaigns. I excel at turning creative visions into executable plans that deliver measurable results.</p>
-                </div>
-                <div class="about-card" data-aos="zoom-in" data-aos-delay="200">
-                    <h3><i class="fas fa-rocket"></i> My Approach</h3>
-                    <p>I combine strategic thinking with hands-on execution. From initial concept to final delivery, I ensure every project maintains its creative integrity while meeting business objectives.</p>
+     <!-- Enhanced About Section -->
+    <section class="about-section" id="about" data-aos="fade-up">
+        <div class="about-container">
+            <div class="about-image" data-aos="fade-right">
+                <img src="about-image.jpg" alt="Jayshree Jangir">
+            </div>
+            <div class="about-content" data-aos="fade-left">
+                <span class="about-badge">About Me</span>
+                <h2 class="about-title">Creating <span>Impactful Media Experiences</span> Through Strategy & Storytelling</h2>
+                <p class="about-text">
+                    With over 3 years of experience in media production and project management, I specialize in crafting compelling narratives that drive engagement and social impact. My approach blends creative vision with data-driven strategy to deliver memorable campaigns that resonate with audiences.
+                </p>
+                <p class="about-text">
+                    As a certified digital marketing professional and project manager, I've successfully led teams to execute award-winning campaigns for brands across industries including healthcare, education, and social enterprises.
+                </p>
+                <div class="about-highlights">
+                    <div class="highlight-card" data-aos="zoom-in">
+                        <div class="highlight-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="highlight-title">Creative Strategy</h3>
+                        <p>Developing innovative concepts that balance artistic vision with business objectives</p>
+                    </div>
+                    <div class="highlight-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="highlight-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="highlight-title">Data-Driven</h3>
+                        <p>Using analytics to inform decisions and measure campaign effectiveness</p>
+                    </div>
+                    <div class="highlight-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="highlight-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="highlight-title">Team Leadership</h3>
+                        <p>Managing cross-functional teams of up to 15 creative professionals</p>
+                    </div>
+                    <div class="highlight-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="highlight-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="highlight-title">Social Impact</h3>
+                        <p>Passionate about projects that create positive community change</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section class="container" id="experience" data-aos="fade-up">
-        <h2 class="section-title">Professional Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item" data-aos="fade-right">
-                <h3>Project Manager | Chirayuu Marketing Agency</h3>
-                <p class="timeline-date">2022 - Present</p>
-                <ul>
-                    <li>Led 15+ influencer marketing campaigns with average engagement increase of 40%</li>
-                    <li>Developed and executed comprehensive social media strategies for 8+ brands</li>
-                    <li>Managed cross-functional teams of up to 12 members for large-scale projects</li>
-                </ul>
-            </div>
-            <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
-                <h3>Marketing Strategist | Chirayuu Marketing Agency</h3>
-                <p class="timeline-date">2021 - 2022</p>
-                <ul>
-                    <li>Created data-driven marketing plans that increased client ROI by average 35%</li>
-                    <li>Pioneered the agency's influencer collaboration framework</li>
-                    <li>Developed brand identity systems for 5+ startups</li>
-                </ul>
-            </div>
-            <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
-                <h3>Customer Care Executive | Girnar Care Pvt. Ltd. (CarDekho)</h3>
-                <p class="timeline-date">2020 - 2021</p>
-                <ul>
-                    <li>Managed client relationships for 50+ accounts</li>
-                    <li>Developed customer service protocols that reduced resolution time by 25%</li>
-                    <li>Created training materials for new team members</li>
-                </ul>
+    <section class="experience-section" id="experience" data-aos="fade-up">
+        <div class="experience-container">
+            <h2 class="section-title">Professional Journey</h2>
+            <div class="experience-timeline">
+                <!-- Experience Item 1 -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <span class="timeline-date">2022 - Present</span>
+                    <h3 class="timeline-company">Chirayuu Marketing Agency</h3>
+                    <h4 class="timeline-position">Project Manager</h4>
+                    <p class="timeline-description">
+                        Lead a team of 12 marketing professionals in developing and executing integrated campaigns for clients across healthcare, education, and e-commerce sectors. Spearheaded the agency's transition to agile project management methodologies.
+                    </p>
+                    <ul class="timeline-description">
+                        <li>Increased client retention by 40% through improved project workflows</li>
+                        <li>Managed budgets up to ₹25 lakhs for large-scale campaigns</li>
+                        <li>Implemented Monday.com for team collaboration, reducing email volume by 60%</li>
+                    </ul>
+                    <div class="timeline-skills">
+                        <span class="skill-tag">Team Leadership</span>
+                        <span class="skill-tag">Agile Methodology</span>
+                        <span class="skill-tag">Client Relations</span>
+                        <span class="skill-tag">Budget Management</span>
+                    </div>
+                </div>
+                
+                <!-- Experience Item 2 -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <span class="timeline-date">2021 - 2022</span>
+                    <h3 class="timeline-company">Chirayuu Marketing Agency</h3>
+                    <h4 class="timeline-position">Marketing Strategist</h4>
+                    <p class="timeline-description">
+                        Developed comprehensive digital marketing strategies for 8+ clients, with a focus on social media growth and brand positioning. Pioneered the agency's influencer marketing framework.
+                    </p>
+                    <ul class="timeline-description">
+                        <li>Grew client social media followings by average 150% in 6 months</li>
+                        <li>Established network of 50+ micro-influencers across niches</li>
+                        <li>Created brand identity systems for 3 startup clients</li>
+                    </ul>
+                    <div class="timeline-skills">
+                        <span class="skill-tag">Digital Strategy</span>
+                        <span class="skill-tag">Influencer Marketing</span>
+                        <span class="skill-tag">Brand Development</span>
+                        <span class="skill-tag">Content Planning</span>
+                    </div>
+                </div>
+                
+                <!-- Experience Item 3 -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <span class="timeline-date">2020 - 2021</span>
+                    <h3 class="timeline-company">Girnar Care Pvt. Ltd. (CarDekho)</h3>
+                    <h4 class="timeline-position">Customer Care Executive</h4>
+                    <p class="timeline-description">
+                        Managed client relationships and provided product support for automotive financial services. Developed customer service protocols and training materials.
+                    </p>
+                    <ul class="timeline-description">
+                        <li>Maintained 95%+ customer satisfaction rating</li>
+                        <li>Reduced average resolution time by 25% through process improvements</li>
+                        <li>Trained 5 new team members on product knowledge and CRM software</li>
+                    </ul>
+                    <div class="timeline-skills">
+                        <span class="skill-tag">Customer Service</span>
+                        <span class="skill-tag">CRM Systems</span>
+                        <span class="skill-tag">Product Training</span>
+                        <span class="skill-tag">Process Improvement</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
     <!-- Projects Section -->
     <section class="container" id="projects" data-aos="fade-up">
         <h2 class="section-title">Featured Projects</h2>
@@ -733,96 +1019,145 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="container" id="skills" data-aos="fade-up">
-        <h2 class="section-title">Skills & Expertise</h2>
+    <section class="skills-section" id="skills" data-aos="fade-up">
         <div class="skills-container">
-            <div class="skill-category" data-aos="fade-up">
-                <h3><i class="fas fa-tasks"></i> Project Management</h3>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Team Leadership</span>
-                        <span>95%</span>
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <!-- Skill Category 1 -->
+                <div class="skill-category" data-aos="fade-up">
+                    <div class="skill-category-title">
+                        <div class="skill-category-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h3 class="skill-category-name">Project Management</h3>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%"></div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Team Leadership</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 95%"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Client Coordination</span>
-                        <span>90%</span>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Agile Methodologies</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 90%"></div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Budget Management</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 85%"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Agile Methodologies</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-                <h3><i class="fas fa-bullhorn"></i> Marketing & Branding</h3>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Social Media Strategy</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Influencer Marketing</span>
-                        <span>88%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 88%"></div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Risk Assessment</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 80%"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Brand Development</span>
-                        <span>85%</span>
+                
+                <!-- Skill Category 2 -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-category-title">
+                        <div class="skill-category-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h3 class="skill-category-name">Marketing & Branding</h3>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%"></div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Social Media Strategy</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Influencer Marketing</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Brand Development</span>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Content Strategy</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 85%"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-                <h3><i class="fas fa-pen-fancy"></i> Creative & Content</h3>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Copywriting</span>
-                        <span>92%</span>
+                
+                <!-- Skill Category 3 -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-category-title">
+                        <div class="skill-category-icon">
+                            <i class="fas fa-pen-fancy"></i>
+                        </div>
+                        <h3 class="skill-category-name">Creative & Content</h3>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 92%"></div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Copywriting</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 95%"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Content Strategy</span>
-                        <span>90%</span>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Video Production</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 85%"></div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Graphic Design</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 80%"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Video Production</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%"></div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Storyboarding</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 90%"></div>
+                        </div>
                     </div>
                 </div>
             </div>
